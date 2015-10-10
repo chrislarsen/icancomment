@@ -4,7 +4,7 @@ $( function(){
 	}else{
 		var currentURL = document.location.href
 	}
-	$( "body" ).append( '<div id="icancomment"><button>&#128172;</button><iframe src="http://localhost:3000?url="' + encodeURIComponent( currentURL ) + '></iframe></div>' );
+	$( "body" ).append( '<div id="icancomment"><button>&#128172;</button><iframe src="http://localhost:3000/?url="' + encodeURIComponent( currentURL ) + '></iframe></div>' );
 	$('#icancomment').click( function(){
 		
 		
