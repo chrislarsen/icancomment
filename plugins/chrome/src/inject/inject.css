@@ -18,17 +18,18 @@
 }
 
 #icancomment button{
-	float:right;
-	width: 30px;
-	height: 30px;
-	font-size: 17px;
-	border-radius: 6px 6px 0px 0px;
-	background-color: silver;
+	float:right !important;
+	width: 30px !important;
+	height: 30px !important;
+	font-size: 17px !important;
+	border-radius: 6px 6px 0px 0px !important;
+	background-color: silver !important;
 	box-shadow: none !important;
-	font-color: #fff;
-	text-align: center;
-	padding:6px;
-	border-width: 0px;
+	color: #fff !important;
+	text-align: center !important;
+	padding:6px !important;
+	border-width: 0px !important;
+	line-height: 100% !important;
 }
 
 #icancomment button:focus{
