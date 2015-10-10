@@ -8,12 +8,13 @@
 }
 
 #icancomment iframe{
-	height: 100%;
-	width: 100%;
+	height: 100% !important;
+	width: 100% !important;
 	display: none;
 	float: left;
-	border-width: 1px 0px 0px 0px;
-	border-color: #666;
+	border-width: 2px 0px 0px 0px !important;
+	border-color: silver !important;
+	border-style: solid !important;
 }
 
 #icancomment button{
