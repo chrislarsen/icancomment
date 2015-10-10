@@ -1,0 +1,18 @@
+<template name="main">
+    <h1>I Can Comment!</h1>
+
+    {{> loginButtons}}
+    <hr/>
+
+    <div class="comment-section">
+        {{> commentsBox id=commandId}}
+    </div>
+
+    <div>
+        {{> hello}}
+    </div>
+</template>
+
+<template name="hello">
+    {{greet}}
+</template>
