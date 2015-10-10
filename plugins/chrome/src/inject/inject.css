@@ -1,0 +1,23 @@
+#icancomment{
+	position: fixed; 
+	bottom: 0;
+	right: 0;
+	height: 50px;
+	width: 100%;
+	background-color: #fff;
+}
+
+#icancomment iframe{
+	height: 100%;
+	width: 100%;
+	display: none;
+	float: left;
+}
+
+#icancomment button{
+	float:right;
+	width: 30px;
+	height: 30px;
+}
+
+
