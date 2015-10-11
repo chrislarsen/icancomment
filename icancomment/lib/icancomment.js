@@ -23,6 +23,18 @@ metricsSchema = {
 
 metrics.attachSchema( new SimpleSchema( metricsSchema ) );
 
+
+var DefaultAllow = {
+  insert: function (userId, doc) {
+    return true
+  },
+  update: function (userId, doc) {
+    return true
+  }
+}
+
+metrics.allow(DefaultAllow);
+
 Router.route('/', function () {
 	var self = this
 	if( !this.params.query.url ){
@@ -49,25 +61,25 @@ Router.route('/', function () {
 });
 
 
-Meteor.methods({
-	updateMetrics: function(  ){
-		console.log('test');
-		//console.log(configObj);
+
+
+updateMetrics = function( configObj ){
+	Meteor.subscribe( "metrics", configObj, function () {
+		currentMetrics = metrics.findOne({ url: configObj.url });
+		if( currentMetrics ){
+			Meteor.call( 'updateMetrics', currentMetrics );
+		}else{
+			configObj[ 'count' ] = 1;
+			metrics.insert( configObj );
+		}
 		
-		// var currentMetrics = metrics.findOne( {_id: this.value } )
-// 		if( currentMetrics ){
-//
-// 		}else{
-// 			//currentMetrics.insert()
-// 		}
-	}
-});
+	})
+	
+}
+
 
 Comments.changeSchema(function (currentSchema) {
-	
-	
-	
-	
+
   	currentSchema.referenceId = {
 		type: String,
 		autoValue: function() {
@@ -77,10 +89,7 @@ Comments.changeSchema(function (currentSchema) {
 					site: Router.current().params.query.site,
 					url: Router.current().params.query.url
 				}
-				Meteor.call('updateMetrics' );
-				
-				
-				console.log(configObj);
+				updateMetrics( configObj )
 			}
 			return this.value;
 		}
