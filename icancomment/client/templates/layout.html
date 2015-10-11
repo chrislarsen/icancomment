@@ -1,7 +1,18 @@
 <template name="main">
-    {{> loginButtons}}
-    <div class="comment-section">
-        {{site}} {{title}} {{url}}
-        {{> commentsBox id=url site=site title=title}}
+    <div class="row">
+        <div class="col-sm-8">
+           <h4> {{> loginButtons}} </h4>
+        </div>
+        <div class="col-sm-4"><h2>Trending Now</h2></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="comment-section col-md-8">
+                {{> commentsBox id=url site=site title=title}}
+            </div>
+        </div>
+        <div class="col-sm-4">
+            {{> posts}}
+        </div>
     </div>
 </template>

@@ -60,6 +60,20 @@ Router.route('/', function () {
 	}
 });
 
+Router.route('/trending', function () {
+	var self = this;
+	this.render('trending');
+});
+
+Router.route('/aboutus', function () {
+	var self = this;
+	this.render('aboutus');
+});
+
+Router.route('/cloud', function () {
+	var self = this;
+	this.render('cloud');
+});
 
 
 

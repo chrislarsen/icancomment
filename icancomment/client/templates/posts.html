@@ -1,0 +1,15 @@
+<template name="posts">
+    <div>
+        {{#each posts}}
+            {{> postItem}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="postItem">
+    <div>
+        <div>
+            <h3><a href="{{url}}">{{title}}</a><span>{{site}}</span></h3>
+        </div>
+    </div>
+</template>
