@@ -3,8 +3,8 @@ $( function(){
 	
 	
 	
-	
-	$( "body" ).append( '<div id="icancomment"><button>&#128172;</button></div>' );
+	//&#128172;
+	$( "body" ).append( '<div id="icancomment"><button><img src="' +  chrome.extension.getURL('bubble.png') + '" height="30" width="30"></button></div>' );
 	
 	$('#icancomment').click( function(){
 		

@@ -25,6 +25,7 @@
     "http://*/*",
 	"https://*/*"
   ],
+  "web_accessible_resources": ["bubble.png"],
   "content_scripts": [
     {
       "matches": [
