@@ -53,7 +53,10 @@ $( function(){
 				var appURL = 'https://icancomment.meteor.com'
 			}
 		
-			$( "#icancomment" ).append( '<iframe src="' + appURL + '/?url=' + encodeURIComponent( currentURL ) + '&title=' + encodeURIComponent( currentTitle ) + '&site=' + encodeURIComponent( siteName ) + '"></iframe>' );
+			$( "#icancomment" ).append( '<iframe id="iccFrame" src="' + appURL + '/?url=' + encodeURIComponent( currentURL ) + '&title=' + encodeURIComponent( currentTitle ) + '&site=' + encodeURIComponent( siteName ) + '"></iframe>' );
+			
+			
+			
 			
 			
 		}

@@ -18,6 +18,12 @@ metricsSchema = {
 	count:{
 		type: Number,
 		optional: true
+	},
+	create:{
+		type: Date,
+		autoValue: function() {
+			return new Date;
+		}
 	}
 }
 
@@ -40,6 +46,7 @@ Router.route('/', function () {
 	if( !this.params.query.url ){
 	  this.render( 'intro' );
 	}else{
+		Meteor.subscribe( 'metrics' );
 		Session.set( 'title', self.params.query.title );
 		Session.set( 'site', self.params.query.site );
 		this.render( "main", {
@@ -61,6 +68,7 @@ Router.route('/', function () {
 });
 
 Router.route('/trending', function () {
+	Meteor.subscribe( 'metrics' );
 	var self = this;
 	this.render('trending');
 });
