@@ -1,6 +1,3 @@
-
-
-Session.set("message", "hello");
 Comments.ui.config({
 template: 'bootstrap'
 });
