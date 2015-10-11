@@ -1,6 +1,7 @@
 <template name="main">
     {{> loginButtons}}
     <div class="comment-section">
-        {{> commentsBox id=commandId}}
+		{{site}} {{title}} {{url}}
+        {{> commentsBox id=url site=site title=title}}
     </div>
 </template>
