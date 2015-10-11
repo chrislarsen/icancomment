@@ -21,3 +21,5 @@ ian:accounts-ui-bootstrap-3
 arkham:comments-ui
 accounts-password
 iron:router
+aldeed:simple-schema
+aldeed:collection2

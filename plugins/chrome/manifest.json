@@ -1,6 +1,6 @@
 {
   "name": "I Can Comment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "This extension allows you to comment on any page.",
   "homepage_url": "http://certaincontent.com",
@@ -16,7 +16,6 @@
     ],
     "persistent": true
   },
-  "options_page": "src/options_custom/index.html",
   "page_action": {
     "default_icon": "icons/icon19.png",
     "default_title": "page action demo",
